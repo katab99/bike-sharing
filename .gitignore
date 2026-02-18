@@ -217,3 +217,10 @@ __marimo__/
 
 
 .DS_Store
+*.ipynb
+.idea
+
+# MLflow local tracking
+mlruns/
+mlflow.db
+mlartifacts/
