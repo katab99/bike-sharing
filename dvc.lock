@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  split:
+    cmd: python src/split_data.py
+    deps:
+    - path: data/raw/hour.csv
+      hash: md5
+      md5: d50bd5a6f55131e72a7bedc334e2fce1
+      size: 1156736
+    - path: src/split_data.py
+      hash: md5
+      md5: 4812e29b3f916593e14b58cec9331060
+      size: 486
+    outs:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: 5be8a359be774d05d9c53136428ac082
+      size: 228719
+    - path: data/processed/train.csv
+      hash: md5
+      md5: 9315095af623e610c64c64994219f49c
+      size: 915707

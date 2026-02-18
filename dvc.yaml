@@ -1,0 +1,9 @@
+stages:
+  split:
+    cmd: python src/split_data.py
+    deps:
+      - data/raw/hour.csv
+      - src/split_data.py
+    outs:
+      - data/processed/train.csv
+      - data/processed/test.csv
