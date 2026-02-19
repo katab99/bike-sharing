@@ -1,14 +1,10 @@
 import pandas as pd
 
 
-def load_data():
-    train = pd.read_csv("data/processed/train.csv")
-    test = pd.read_csv("data/processed/test.csv")
+def load_data(data_path: str, input_features: list[str], target_feature: str):
+    data = pd.read_csv(data_path)
 
-    X_train = train.drop(["dteday", "instant", "casual", "registered", "cnt"], axis=1)
-    X_test = test.drop(["dteday", "instant", "casual", "registered", "cnt"], axis=1)
+    X = data[input_features]
+    y = data[target_feature]
 
-    y_train = train["cnt"]
-    y_test = test["cnt"]
-
-    return X_train, X_test, y_train, y_test
+    return X, y
