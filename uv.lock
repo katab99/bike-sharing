@@ -70,6 +70,7 @@ name = "bike-sharing"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "fastapi" },
     { name = "mlflow" },
     { name = "pandas" },
     { name = "protobuf" },
@@ -83,6 +84,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "fastapi", specifier = ">=0.129.0" },
     { name = "mlflow", specifier = ">=2.10.0" },
     { name = "pandas", specifier = ">=2.2.0,<3.0.0" },
     { name = "protobuf", specifier = "<5.0.0" },
