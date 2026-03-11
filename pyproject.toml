@@ -9,7 +9,7 @@ dependencies = [
     "pandas>=2.2.0,<3.0.0",  # Capping pandas to satisfy MLflow
     "scikit-learn>=1.5.0",   # Note: 1.8.0 does not exist yet; 1.6.1 is current latest
     "protobuf<5.0.0",        # Keeps the 'service' module available
-    "fastapi>=0.129.0",
+    "fastapi[standard]>=0.129.0",
 ]
 
 [dependency-groups]
